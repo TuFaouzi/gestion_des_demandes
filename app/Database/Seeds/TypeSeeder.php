@@ -9,9 +9,7 @@ class TypeSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['label' => 'Vacation', 'status' => 'Active'],
-            ['label' => 'Sick Leave', 'status' => 'Active'],
-            ['label' => 'Other', 'status' => 'Active'],
+            ['label' => "Demande d'achat", 'status' => 'Active'],
         ];
 
         $this->db->table('types')->insertBatch($data);
