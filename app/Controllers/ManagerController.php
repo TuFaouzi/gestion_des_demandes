@@ -81,4 +81,8 @@ class ManagerController extends BaseController
         return view('manager/reject', ['requestId' => $requestId]);
     }
 
+    public function showRequest($id) {
+        return view('manager/showRequest', ['id' => $id]);
+    }
+
 }

@@ -92,4 +92,8 @@ class BossController extends BaseController
         return redirect()->to('/')->with('success', 'Request declined successfully.');
     }
 
+    public function showRequest(int $id) {
+        return view('boss/showRequest', ['id' => $id]);
+    }
+
 }

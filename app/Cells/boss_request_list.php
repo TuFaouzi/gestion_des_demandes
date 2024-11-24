@@ -14,11 +14,11 @@
             <?php foreach ($results as $request): ?>
                 <tr>
                     <td><?= esc($request['title']) ?></td>
-                    <td><?= esc($request['status']) ?></td>
+                    <td><?= esc($request['statusLabel']) ?></td>
                     <td><?= esc($request['type']) ?></td>
                     <td><?= esc($request['firstName'] . ' ' . $request['lastName']) ?></td>
                     <td class="request_list__buttons">
-                        <a class="link" href="<?= site_url("request/" . $request['id']) ?>">Voir</a>
+                        <a class="link" href="<?= site_url("boss/request/" . $request['id']) ?>">Voir</a>
                         <a class="link request_list__buttons__approve" href="<?= site_url("boss/approve/" . $request['id']) ?>">Approuver</a>
                         <a class="link request_list__buttons__reject" href="/boss/decline/<?= $request['id']; ?>">Décliner</a>
                     </td>

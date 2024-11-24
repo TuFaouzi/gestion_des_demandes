@@ -79,4 +79,8 @@ class EmployeeController extends BaseController
 
         return view('employee/add-request', ['types' => $types]);
     }
+    public function showRequest(int $id) {
+        return view('employee/showRequest', ['id' => $id]);
+    }
+
 }

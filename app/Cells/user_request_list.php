@@ -17,11 +17,11 @@
                     ($request['status'] === "Validated" ? "table__row__validated" : "")
                     ?>">
                     <td><?= esc($request['title']) ?></td>
-                    <td><?= esc($request['status']) ?></td>
+                    <td><?= esc($request['statusLabel']) ?></td>
                     <td><?= esc($request['type']) ?></td>
                     <td><?= esc($request['created_at']) ?></td>
                     <td class="request_list__buttons">
-                        <a class="link" href="<?= site_url("request/" . $request['id']) ?>">Voir</a>
+                    <a class="link" href="<?= site_url("employee/request/" . $request['id']) ?>">Voir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

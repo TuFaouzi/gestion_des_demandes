@@ -32,6 +32,7 @@ $routes->group('admin', ['filter' => 'admin'], function ($routes) {
 
 // Employee routes
 $routes->group('employee', ['filter' => 'employee'], function ($routes) {
+    $routes->get('request/(:num)', 'EmployeeController::showRequest/$1');
     $routes->get('requests', 'EmployeeController::requests');
     $routes->get('add-request', 'EmployeeController::addRequest');
     $routes->post('add-request', 'EmployeeController::addRequest');
@@ -39,6 +40,7 @@ $routes->group('employee', ['filter' => 'employee'], function ($routes) {
 
 // Manager routes
 $routes->group('manager', ['filter' => 'manager'], function ($routes) {
+    $routes->get('request/(:num)', 'ManagerController::showRequest/$1');
     $routes->get('requests', 'ManagerController::requests');
     $routes->get('approve/(:num)', 'ManagerController::approve/$1');
     $routes->get('reject/(:num)', 'ManagerController::reject/$1');
@@ -47,6 +49,7 @@ $routes->group('manager', ['filter' => 'manager'], function ($routes) {
 
 // Boss routes
 $routes->group('boss', ['filter' => 'boss'], function ($routes) {
+    $routes->get('request/(:num)', 'BossController::showRequest/$1');
     $routes->get('requests', 'BossController::requests');
     $routes->get('approve/(:num)', 'BossController::approve/$1');
     $routes->get('decline/(:num)', 'BossController::declineForm/$1');

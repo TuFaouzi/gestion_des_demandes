@@ -14,12 +14,12 @@
             <?php foreach ($results as $request): ?>
                 <tr>
                     <td><?= esc($request['title']) ?></td>
-                    <td><?= esc($request['status']) ?></td>
+                    <td><?= esc($request['statusLabel']) ?></td>
                     <td><?= esc($request['type']) ?></td>
                     <td><?= esc($request['firstName'] . ' ' . $request['lastName']) ?></td>
                     <td class="request_list__buttons">
-                        <a class="link" href="<?= site_url("request/" . $request['id']) ?>">Voir</a>
-                        <a class="link request_list__buttons__approve"
+                    <a class="link" href="<?= site_url("manager/request/" . $request['id']) ?>">Voir</a>
+                    <a class="link request_list__buttons__approve"
                             href="<?= site_url("manager/approve/" . $request['id']) ?>">Escalader</a>
                         <a class="link request_list__buttons__reject" href="/manager/reject/<?= $request['id']; ?>">Rejeter</a>
                     </td>
