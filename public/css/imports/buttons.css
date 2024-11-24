@@ -9,12 +9,12 @@
   font-weight: bold;
 }
 .btn--callToAction {
-  color: white;
+  color: #ffffff;
   background-color: #5045E6;
   border-color: #5045E6;
 }
 .btn--callToAction:hover {
-  color: white;
+  color: #ffffff;
   background-color: #4437CB;
   border-color: #A49FF1;
 }

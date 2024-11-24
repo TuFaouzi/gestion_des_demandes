@@ -1,14 +1,14 @@
 // Colors
-$color-bg: white;
+$color-bg: #ffffff;
 $color-bg-grey: #F3F3F5;
 
 $color-box-shadow: #f1f1f1;
 
-$color-danger: rgb(153, 10, 10);
-$color-danger-tint: rgb(254, 236, 236);
+$color-danger: #990a0a;
+$color-danger-tint: #feecec;
 
-$color-approved: rgb(34, 181, 42);
-$color-approved-tint: rgb(236, 254, 237);
+$color-approved: #22b52a;
+$color-approved-tint: #ecfeed;
 
 $color-primary: #5045E6;
 $color-primary-tint: #E7F0FD;
@@ -16,12 +16,12 @@ $color-primary-tint-tint: #f5f9ff;
 $color-primary-tone: #A49FF1;
 $color-primary-shade: #4437CB;
 
-$color-font-primary: black;
-$color-font-secondary: rgb(134, 134, 134);
-$color-font-secondary-hover: rgb(90, 90, 90);
+$color-font-primary: #000000;
+$color-font-secondary: #868686;
+$color-font-secondary-hover: #5a5a5a;
 
 $color-border-primary: $color-primary;
-$color-border-secondary: rgb(189, 189, 189);
+$color-border-secondary: #bdbdbd;
 
 $color-btn-callToAction-bg: $color-primary;
 $color-btn-callToAction-font: $color-bg;

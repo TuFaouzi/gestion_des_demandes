@@ -9,12 +9,12 @@
   font-weight: bold;
 }
 .btn--callToAction {
-  color: white;
+  color: #ffffff;
   background-color: #5045E6;
   border-color: #5045E6;
 }
 .btn--callToAction:hover {
-  color: white;
+  color: #ffffff;
   background-color: #4437CB;
   border-color: #A49FF1;
 }
@@ -27,30 +27,30 @@
 
 html {
   font-family: "Poppins", sans-serif;
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #000000;
   font-size: 15px;
 }
 
 .link {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 .link__secondary {
-  color: rgb(134, 134, 134);
+  color: #868686;
 }
 .link__secondary:hover {
-  color: rgb(90, 90, 90);
+  color: #5a5a5a;
 }
 
 .text--secondary {
-  color: rgb(134, 134, 134);
+  color: #868686;
 }
 .text--approved {
-  color: rgb(34, 181, 42);
+  color: #22b52a;
 }
 .text--danger {
-  color: rgb(153, 10, 10);
+  color: #990a0a;
 }
 
 .title {
@@ -77,7 +77,7 @@ html {
 .box {
   width: 100%;
   height: fit-content;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 30px;
 }
@@ -99,7 +99,7 @@ html {
 }
 .pagination li a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 .pagination li a:not([aria-label=First]):not([aria-label=Previous]):not([aria-label=Next]):not([aria-label=Last]) {
   padding: 10px 15px;
@@ -149,10 +149,10 @@ html {
   border-radius: 0 10px 10px 0;
 }
 .table__row__rejected {
-  background-color: rgb(254, 236, 236);
+  background-color: #feecec;
 }
 .table__row__validated {
-  background-color: rgb(236, 254, 237);
+  background-color: #ecfeed;
 }
 
 .request_list__buttons {
@@ -168,7 +168,7 @@ html {
   text-decoration: underline;
 }
 .request_list__buttons__reject:hover {
-  color: rgb(153, 10, 10);
+  color: #990a0a;
 }
 .request_list__buttons__approve:hover {
   color: #5045E6;
@@ -210,7 +210,7 @@ html {
   width: 100%;
   height: 40px;
   padding: 10px;
-  border: 1px solid rgb(189, 189, 189);
+  border: 1px solid #bdbdbd;
   border-radius: 7px;
 }
 .form__inputs__input input:focus, .form__inputs__input select:focus, .form__inputs__input textarea:focus {
@@ -230,7 +230,7 @@ html {
   padding-right: 20px;
 }
 .form__error {
-  color: rgb(153, 10, 10);
+  color: #990a0a;
 }
 
 .showRequest {
@@ -276,7 +276,7 @@ html {
   flex-shrink: initial;
 }
 .showRequest__main__box p {
-  color: rgb(134, 134, 134);
+  color: #868686;
 }
 .showRequest__main__body {
   display: flex;
@@ -305,7 +305,7 @@ html {
   padding: 10px;
   background-color: #E7F0FD;
   width: 100%;
-  border: 1px solid rgb(189, 189, 189);
+  border: 1px solid #bdbdbd;
 }
 
 /*# sourceMappingURL=request.css.map */

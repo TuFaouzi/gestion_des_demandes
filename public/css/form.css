@@ -9,12 +9,12 @@
   font-weight: bold;
 }
 .btn--callToAction {
-  color: white;
+  color: #ffffff;
   background-color: #5045E6;
   border-color: #5045E6;
 }
 .btn--callToAction:hover {
-  color: white;
+  color: #ffffff;
   background-color: #4437CB;
   border-color: #A49FF1;
 }
@@ -55,7 +55,7 @@
   width: 100%;
   height: 40px;
   padding: 10px;
-  border: 1px solid rgb(189, 189, 189);
+  border: 1px solid #bdbdbd;
   border-radius: 7px;
 }
 .form__inputs__input input:focus, .form__inputs__input select:focus, .form__inputs__input textarea:focus {
@@ -75,7 +75,7 @@
   padding-right: 20px;
 }
 .form__error {
-  color: rgb(153, 10, 10);
+  color: #990a0a;
 }
 
 /*# sourceMappingURL=form.css.map */
