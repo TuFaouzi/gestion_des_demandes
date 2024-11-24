@@ -1,0 +1,22 @@
+.btn {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  min-width: fit-content;
+  border: 1px solid;
+  transition: all 300ms;
+  border-radius: 7px;
+  font-weight: bold;
+}
+.btn--callToAction {
+  color: white;
+  background-color: #5045E6;
+  border-color: #5045E6;
+}
+.btn--callToAction:hover {
+  color: white;
+  background-color: #4437CB;
+  border-color: #A49FF1;
+}
+
+/*# sourceMappingURL=imports.css.map */

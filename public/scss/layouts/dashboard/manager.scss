@@ -1,0 +1,30 @@
+@forward "../../app";
+@use "../../imports.scss" as *;
+
+.Manager {
+    &__requestList {
+        @include flex(column, flex-start, flex-start, 20px);
+
+        &__title {
+            display: block;
+            margin-bottom: $size-from-title-to-text;
+        }
+    }
+
+    &__stats {
+        @include flex(row, flex-start, flex-start);
+
+        &__desc {
+            width: 35%;
+        }
+
+        &__content {
+            width: 65%;
+            @include flex(row, flex-start, flex-start, 10px);
+
+            .stats-box {
+                height: 100px;
+            }
+        }
+    }
+}

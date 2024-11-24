@@ -1,0 +1,57 @@
+@use "../imports" as *;
+@forward "../app";
+@forward "../form";
+
+#Login {
+    @include flex(column, center, center);
+    width: 100vw;
+    height: 100vh;
+
+    .Login {
+        &__main {
+            width: 500px;
+            @include flex(column, center, center, 20px);
+        }
+    }
+
+    .title {
+        display: block;
+        padding: 0 100px;
+        text-align: center;
+    }
+
+    form {
+        height: fit-content;
+
+        .form {
+            &__inputs {
+                gap: 0;
+                &__input {
+                        &:first-child {
+                            input {
+                                border-radius: $radius-input $radius-input 0 0;
+                                border-bottom: calc($size-input-border-width / 2) solid $color-input-border;
+                            }
+                        }
+    
+                        &:last-child {
+                            input {
+                                border-radius: 0 0 $radius-input $radius-input;
+                                border-top: calc($size-input-border-width / 2) solid $color-input-border;
+                            }
+                        }
+    
+                        input {
+                            &:focus {
+                                border: $size-input-border-width solid $color-input-focus-border;
+                            }
+                        }
+                }
+            }
+            &__submit {
+                width: 100% !important;
+            }
+        }
+    }
+
+}

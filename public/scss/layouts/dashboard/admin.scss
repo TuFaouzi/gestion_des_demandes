@@ -1,0 +1,10 @@
+@forward "../../app";
+@use "../../imports.scss" as *;
+
+.Admin__userList {
+    @include flex(column, flex-start, flex-start, 20px);
+    &__title {
+        display: block;
+        margin-bottom: $size-from-title-to-text;
+    }
+}

@@ -1,0 +1,11 @@
+@forward "../../app";
+@use "../../imports.scss" as *;
+
+.Employee__requestList {
+    @include flex(column, flex-start, flex-start, 20px);
+    &__title {
+        display: block;
+        margin-bottom: $size-from-title-to-text;
+    }
+    
+}

@@ -1,0 +1,27 @@
+@use "./variables.scss" as *;
+
+.btn {
+    cursor: pointer;
+    height: $size-btn-height;
+    width: 100%;
+    min-width: fit-content;
+    border: $size-btn-border-width solid;
+    transition: all 300ms;
+    border-radius: $radius-btn;
+    font-weight: bold;
+
+
+    &--callToAction {
+        color: $color-btn-callToAction-font;
+        background-color: $color-btn-callToAction-bg;
+        border-color: $color-btn-callToAction-border;
+
+        &:hover {
+
+            color: $color-btn-callToAction-hover-font;
+            background-color: $color-btn-callToAction-hover-bg;
+            border-color: $color-btn-callToAction-hover-border;
+        }
+
+    }
+}

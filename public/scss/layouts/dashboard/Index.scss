@@ -1,0 +1,92 @@
+@forward "../../app";
+@forward "../../form";
+@use "../../imports.scss" as *;
+
+#AppLayout {
+    background-color: $color-bg-grey;
+    min-height: 100vh;
+    height: fit-content;
+    padding-bottom: 30px;
+
+    .header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: $color-bg;
+        width: 100%;
+        @include flex(row, center, flex-end, 50px);
+        line-height: 1;
+
+        &__title {
+            line-height: 1;
+            width: fit-content;
+            display: block;
+            white-space: pre;
+        }
+
+        &__main {
+            width: 100%;
+            @include flex(row, space-between, center);
+            line-height: 1.2;
+            color: $color-font-secondary;
+            font-weight: bold;
+
+            a {
+                color: $color-font-secondary;
+
+                &:hover {
+                    color: $color-font-secondary-hover;
+                }
+            }
+
+            .nav {
+                @include flex(row, center, center, 30px);
+
+                &__selected {
+                    color: $color-font-secondary-hover;
+                }
+            }
+
+            &__logout {
+                &:hover {
+                    color: $color-danger !important;
+                }
+            }
+
+        }
+    }
+
+    .form-box {
+        @include flex(row, flex-start, flex-start, 10px);
+        width: 100%;
+
+        .form {
+            width: 65%;
+            height: 100%;
+        }
+
+        &__desc {
+            width: 35%;
+            height: 100%;
+            @include flex(column, flex-start, flex-start, $size-from-title-to-text);
+        }
+    }
+
+    .stats-box {
+        width: 100%;
+        border: $size-input-border-width solid $color-input-border;
+        padding: 20px;
+        @include flex(column, flex-start, flex-start, 10px);
+        div {
+            white-space: pre;
+            width: 100%;
+            text-overflow: ellipsis;
+        }
+    }
+
+    main {
+        height: 100%;
+        padding-top: 30px;
+        @include flex(column, flex-start, flex-start, 30px);
+    }
+
+}

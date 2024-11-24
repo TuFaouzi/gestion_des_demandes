@@ -1,0 +1,184 @@
+@use "./imports" as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    background-color: $color-bg;
+    color: $color-font-primary;
+    font-size: $size-root-font-laptop;
+}
+
+.link {
+    text-decoration: none;
+    color: $color-font-primary;
+    &__secondary {
+        color: $color-font-secondary;
+        &:hover {
+            color: $color-font-secondary-hover;
+        }
+    }
+}
+
+.text {
+    &--secondary {
+        color: $color-font-secondary;
+    }
+    &--approved {
+        color: $color-approved;
+    }
+    &--danger {
+        color: $color-danger;
+    }
+}
+
+.title {
+    font-size: $size-font-title;
+
+    &--sub {
+        font-size: $size-font-title-sub;
+
+        &--sub {
+            font-size: $size-font-title-sub-sub;
+
+        }
+    }
+}
+
+
+.font {
+    &-bold {
+        font-weight: bold;
+    }
+
+    &-medium {
+        font-weight: 600;
+    }
+}
+
+.pad {
+    padding: 0 $padding-page-laptop;
+}
+
+.box {
+    width: 100%;
+    height: fit-content;
+    background-color: $color-bg;
+    border-radius: $radius-box;
+    padding: 30px;
+
+    &--shadow {
+        box-shadow: 2px 2px 2px $color-box-shadow,
+            -1px -1px 5px $color-box-shadow;
+    }
+}
+
+.pagination {
+    @include flex(row, flex-start, center, 5px);
+
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: $color-font-primary;
+        }
+
+        a:not([aria-label=First]):not([aria-label=Previous]):not([aria-label=Next]):not([aria-label=Last]) {
+            padding: 10px 15px;
+            transition: all 300ms;
+            border-radius: $radius-btn;
+
+            &:hover {
+                background-color: $color-bg-grey;
+            }
+        }
+        
+    }
+
+    li.active {
+        a {
+            background-color: $color-bg-grey;
+        }
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        background-color: $color-primary-tint-tint;
+        border-radius: $radius-box;
+    }
+
+    th {
+        text-align: start;
+    }
+
+    &__emptyRow {
+        height: 20px;
+    }
+
+    tr {
+        margin-bottom: 10px;
+
+        td,
+        th {
+            padding: 15px 0;
+
+            &:first-child {
+                padding-left: 20px;
+            }
+
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+
+        th {
+            &:first-child {
+                border-radius: $radius-box 0 0 $radius-box;
+            }
+
+            &:last-child {
+                border-radius: 0 $radius-box $radius-box 0;
+            }
+        }
+    }
+
+    &__row {
+        &__rejected {
+            background-color: $color-danger-tint;
+        }
+
+        &__validated {
+            background-color: $color-approved-tint;
+        }
+    }
+}
+
+.request_list__buttons {
+    @include flex(row, flex-end, center, 10px);
+
+    a {
+        text-decoration: underline;
+    }
+
+    &__reject {
+        &:hover {
+            color: $color-danger;
+        }
+    }
+
+    &__approve {
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

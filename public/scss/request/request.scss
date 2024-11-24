@@ -1,0 +1,48 @@
+@forward "../app";
+@forward "../form";
+@use "../imports.scss" as *;
+
+.showRequest {
+    padding-top: 30px;
+    background-color: $color-bg-grey;
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    @include flex(column, flex-start, center);
+
+    &__main {
+        @include flex(column, flex-start, flex-start, 30px);
+        width: 600px;
+
+        &__header {
+            @include flex(column, flex-start, flex-start, 2px);
+        }
+
+        &__box {
+            @include flex(column, flex-start, flex-start, 2px);
+            p {
+                color: $color-font-secondary;
+            }
+        }
+
+        &__body {
+            @include flex(column, flex-start, flex-start, 10px);
+            width: 100%;
+
+            &__desc {
+                width: 100%;
+                @include flex(column, flex-start, flex-start, 5px);
+
+                p {
+                    height: fit-content;
+                    min-height: 200px;
+                    border-radius: $radius-input;
+                    padding: 10px;
+                    background-color: $color-input-filled-bg;
+                    width: 100%;
+                    border: $size-input-border-width solid $color-input-border;
+                }
+            }
+        }
+    }
+}

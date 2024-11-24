@@ -1,0 +1,350 @@
+.btn {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  min-width: fit-content;
+  border: 1px solid;
+  transition: all 300ms;
+  border-radius: 7px;
+  font-weight: bold;
+}
+.btn--callToAction {
+  color: white;
+  background-color: #5045E6;
+  border-color: #5045E6;
+}
+.btn--callToAction:hover {
+  color: white;
+  background-color: #4437CB;
+  border-color: #A49FF1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link__secondary {
+  color: rgb(134, 134, 134);
+}
+.link__secondary:hover {
+  color: rgb(90, 90, 90);
+}
+
+.text--secondary {
+  color: rgb(134, 134, 134);
+}
+.text--approved {
+  color: rgb(34, 181, 42);
+}
+.text--danger {
+  color: rgb(153, 10, 10);
+}
+
+.title {
+  font-size: 2.3rem;
+}
+.title--sub {
+  font-size: 1.8rem;
+}
+.title--sub--sub {
+  font-size: 1.4rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+.font-medium {
+  font-weight: 600;
+}
+
+.pad {
+  padding: 0 150px;
+}
+
+.box {
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.box--shadow {
+  box-shadow: 2px 2px 2px #f1f1f1, -1px -1px 5px #f1f1f1;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+.pagination li {
+  list-style-type: none;
+}
+.pagination li a {
+  text-decoration: none;
+  color: black;
+}
+.pagination li a:not([aria-label=First]):not([aria-label=Previous]):not([aria-label=Next]):not([aria-label=Last]) {
+  padding: 10px 15px;
+  transition: all 300ms;
+  border-radius: 7px;
+}
+.pagination li a:not([aria-label=First]):not([aria-label=Previous]):not([aria-label=Next]):not([aria-label=Last]):hover {
+  background-color: #F3F3F5;
+}
+.pagination li.active a {
+  background-color: #F3F3F5;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: #f5f9ff;
+  border-radius: 10px;
+}
+.table th {
+  text-align: start;
+}
+.table__emptyRow {
+  height: 20px;
+}
+.table tr {
+  margin-bottom: 10px;
+}
+.table tr td,
+.table tr th {
+  padding: 15px 0;
+}
+.table tr td:first-child,
+.table tr th:first-child {
+  padding-left: 20px;
+}
+.table tr td:last-child,
+.table tr th:last-child {
+  padding-right: 20px;
+}
+.table tr th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.table tr th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.table__row__rejected {
+  background-color: rgb(254, 236, 236);
+}
+.table__row__validated {
+  background-color: rgb(236, 254, 237);
+}
+
+.request_list__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+.request_list__buttons a {
+  text-decoration: underline;
+}
+.request_list__buttons__reject:hover {
+  color: rgb(153, 10, 10);
+}
+.request_list__buttons__approve:hover {
+  color: #5045E6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+  height: 100%;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+}
+.form__inputs__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+  height: fit-content;
+}
+.form__inputs__input input, .form__inputs__input select, .form__inputs__input textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 7px;
+}
+.form__inputs__input input:focus, .form__inputs__input select:focus, .form__inputs__input textarea:focus {
+  border: 1px solid #5045E6;
+  outline: none;
+}
+.form__inputs__input input:not(:placeholder-shown), .form__inputs__input select:not(:placeholder-shown), .form__inputs__input textarea:not(:placeholder-shown) {
+  background-color: #E7F0FD;
+}
+.form__inputs__input textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+.form__submit {
+  width: fit-content !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.form__error {
+  color: rgb(153, 10, 10);
+}
+
+#AppLayout {
+  background-color: #F3F3F5;
+  min-height: 100vh;
+  height: fit-content;
+  padding-bottom: 30px;
+}
+#AppLayout .header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  line-height: 1;
+}
+#AppLayout .header__title {
+  line-height: 1;
+  width: fit-content;
+  display: block;
+  white-space: pre;
+}
+#AppLayout .header__main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-grow: initial;
+  flex-shrink: initial;
+  line-height: 1.2;
+  color: rgb(134, 134, 134);
+  font-weight: bold;
+}
+#AppLayout .header__main a {
+  color: rgb(134, 134, 134);
+}
+#AppLayout .header__main a:hover {
+  color: rgb(90, 90, 90);
+}
+#AppLayout .header__main .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+#AppLayout .header__main .nav__selected {
+  color: rgb(90, 90, 90);
+}
+#AppLayout .header__main__logout:hover {
+  color: rgb(153, 10, 10) !important;
+}
+#AppLayout .form-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+}
+#AppLayout .form-box .form {
+  width: 65%;
+  height: 100%;
+}
+#AppLayout .form-box__desc {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+#AppLayout .stats-box {
+  width: 100%;
+  border: 1px solid rgb(189, 189, 189);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+#AppLayout .stats-box div {
+  white-space: pre;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+#AppLayout main {
+  height: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+/*# sourceMappingURL=Index.css.map */

@@ -1,0 +1,81 @@
+.btn {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  min-width: fit-content;
+  border: 1px solid;
+  transition: all 300ms;
+  border-radius: 7px;
+  font-weight: bold;
+}
+.btn--callToAction {
+  color: white;
+  background-color: #5045E6;
+  border-color: #5045E6;
+}
+.btn--callToAction:hover {
+  color: white;
+  background-color: #4437CB;
+  border-color: #A49FF1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+  height: 100%;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+}
+.form__inputs__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  flex-grow: initial;
+  flex-shrink: initial;
+  width: 100%;
+  height: fit-content;
+}
+.form__inputs__input input, .form__inputs__input select, .form__inputs__input textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 7px;
+}
+.form__inputs__input input:focus, .form__inputs__input select:focus, .form__inputs__input textarea:focus {
+  border: 1px solid #5045E6;
+  outline: none;
+}
+.form__inputs__input input:not(:placeholder-shown), .form__inputs__input select:not(:placeholder-shown), .form__inputs__input textarea:not(:placeholder-shown) {
+  background-color: #E7F0FD;
+}
+.form__inputs__input textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+.form__submit {
+  width: fit-content !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.form__error {
+  color: rgb(153, 10, 10);
+}
+
+/*# sourceMappingURL=form.css.map */

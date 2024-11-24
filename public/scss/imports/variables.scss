@@ -1,0 +1,63 @@
+// Colors
+$color-bg: white;
+$color-bg-grey: #F3F3F5;
+
+$color-box-shadow: #f1f1f1;
+
+$color-danger: rgb(153, 10, 10);
+$color-danger-tint: rgb(254, 236, 236);
+
+$color-approved: rgb(34, 181, 42);
+$color-approved-tint: rgb(236, 254, 237);
+
+$color-primary: #5045E6;
+$color-primary-tint: #E7F0FD;
+$color-primary-tint-tint: #f5f9ff;
+$color-primary-tone: #A49FF1;
+$color-primary-shade: #4437CB;
+
+$color-font-primary: black;
+$color-font-secondary: rgb(134, 134, 134);
+$color-font-secondary-hover: rgb(90, 90, 90);
+
+$color-border-primary: $color-primary;
+$color-border-secondary: rgb(189, 189, 189);
+
+$color-btn-callToAction-bg: $color-primary;
+$color-btn-callToAction-font: $color-bg;
+$color-btn-callToAction-border: $color-primary;
+$color-btn-callToAction-hover-bg: $color-primary-shade;
+$color-btn-callToAction-hover-font: $color-bg;
+$color-btn-callToAction-hover-border: $color-primary-tone;
+
+$color-form-error: $color-danger;
+
+$color-input-filled-bg: $color-primary-tint;
+$color-input-border: $color-border-secondary;
+$color-input-focus-border: $color-primary;
+
+
+// Sizes
+$size-root-font-laptop: 15px;
+$size-root-font-phone: 12px;
+
+$size-btn-height: 40px;
+$size-btn-border-width: 1px;
+
+$size-input-height: $size-btn-height;
+$size-input-border-width: $size-btn-border-width;
+
+$size-font-title: 2.3rem;
+$size-font-title-sub: 1.8rem;
+$size-font-title-sub-sub: 1.4rem;
+
+$size-from-title-to-text: 15px;
+
+// Radius
+$radius-btn: 7px;
+$radius-input: $radius-btn;
+$radius-box: 10px;
+
+// Paddings
+$padding-input: 10px;
+$padding-page-laptop: 150px;
