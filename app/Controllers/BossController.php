@@ -8,6 +8,7 @@ class BossController extends BaseController
     protected $requestController;
     protected $interactionController;
     protected $requestStatusController;
+    protected $userController;
 
 
     public function __construct()
@@ -15,6 +16,7 @@ class BossController extends BaseController
         $this->requestController = new RequestController();
         $this->interactionController = new InteractionController();
         $this->requestStatusController = new RequestStatusController();
+        $this->userController = new UsersController();
     }
     public function index($perPage, $page) {
         $pp = $perPage ?? 10;
@@ -31,7 +33,8 @@ class BossController extends BaseController
             'pendingRequestsCount' => $pendingRequestsCount,
             'approvedRequestsCount' => $approvedRequestsCount,
             'rejectedRequestsCount' => $rejectedRequestsCount,
-            'forwardedRequestsCount' => $forwardedRequestsCount
+            'forwardedRequestsCount' => $forwardedRequestsCount,
+            'user' => $this->userController->findUserById(session()->get('user_id'))
         ]);
     }
 
@@ -64,7 +67,7 @@ class BossController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Request not found');
         }
 
-        return view('boss/decline', ['requestId' => $requestId]);
+        return view('boss/decline', ['requestId' => $requestId, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
     public function decline($requestId)
@@ -93,7 +96,7 @@ class BossController extends BaseController
     }
 
     public function showRequest(int $id) {
-        return view('boss/showRequest', ['id' => $id]);
+        return view('boss/showRequest', ['id' => $id, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
 }

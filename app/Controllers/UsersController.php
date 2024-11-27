@@ -18,6 +18,10 @@ class UsersController extends BaseController
         return $this->userModel->insert($data);
     }
 
+    public function findUserById($id) {
+        return $this->userModel->find($id);
+    }
+
     public function validateValues($data) {
         return $this->userModel->validate($data);
     }

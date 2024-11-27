@@ -7,12 +7,14 @@ class ManagerController extends BaseController
     protected $requestController;
     protected $interactionController;
     protected $requestStatusController;
+    protected $userController;
 
     public function __construct()
     {
         $this->requestController = new RequestController();
         $this->interactionController = new InteractionController();
         $this->requestStatusController = new RequestStatusController();
+        $this->userController = new UsersController();
     }
 
     public function index($perPage, $page)
@@ -31,14 +33,15 @@ class ManagerController extends BaseController
             'pendingRequestsCount' => $pendingRequestsCount,
             'approvedRequestsCount' => $approvedRequestsCount,
             'rejectedRequestsCount' => $rejectedRequestsCount,
-            'forwardedRequestsCount' => $forwardedRequestsCount
+            'forwardedRequestsCount' => $forwardedRequestsCount,
+            'user' => $this->userController->findUserById(session()->get('user_id'))
         ]);
     }
 
     public function requests()
     {
         $requests = $this->requestController->getWaitingRequests();
-        return view('manager/requests', ['requests' => $requests]);
+        return view('manager/requests', ['requests' => $requests, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
     public function approve($requestId)
@@ -78,11 +81,11 @@ class ManagerController extends BaseController
             return redirect()->to('/')->with('success', 'Request rejected successfully');
         }
 
-        return view('manager/reject', ['requestId' => $requestId]);
+        return view('manager/reject', ['requestId' => $requestId, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
     public function showRequest($id) {
-        return view('manager/showRequest', ['id' => $id]);
+        return view('manager/showRequest', ['id' => $id, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
 }

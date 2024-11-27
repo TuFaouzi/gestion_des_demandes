@@ -14,7 +14,7 @@ class AdminController extends BaseController
     public function index($perPage, $page) {
         $pp = $perPage ?? 10;
         $p = $page ?? 1;
-        return view('admin/index', ['perPage' => $pp, 'page' => $p]);
+        return view('admin/index', ['perPage' => $pp, 'page' => $p, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     } 
 
     public function addUser()
@@ -43,7 +43,7 @@ class AdminController extends BaseController
             return redirect()->to('/admin/users')->with('success', 'User added successfully!');
         }
 
-        return view('admin/add_user');
+        return view('admin/add_user', ['user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
 }

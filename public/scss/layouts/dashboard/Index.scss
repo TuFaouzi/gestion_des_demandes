@@ -6,52 +6,120 @@
     background-color: $color-bg-grey;
     min-height: 100vh;
     height: fit-content;
-    padding-bottom: 30px;
+    @include flex(row, flex-start, flex-start);
+    position: relative;
 
-    .header {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        background-color: $color-bg;
-        width: 100%;
-        @include flex(row, center, flex-end, 50px);
-        line-height: 1;
+    &__nav {
 
-        &__title {
-            line-height: 1;
-            width: fit-content;
-            display: block;
-            white-space: pre;
+        padding: 0 10px;
+        width: 250px;
+        height: 100vh;
+        flex: 0 0 auto;
+
+        background-color: #2c3e50;
+        color: white;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        @include flex(column, flex-start, flex-start, 10px);
+    }
+
+    .AppLayout {
+
+        &__nav {
+
+            &__main {
+                @include flex(column, flex-start, flex-start, 10px);
+
+                >div {
+                    @include flex(row, flex-start, center, 10px);
+
+                    .AppLayout__nav__main {
+                        &__icon {
+                            width: fit-content;
+                            height: fit-content;
+                            @include flex(column, center, center);
+
+                            svg {
+                                color: white !important;
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        &__content {
+                            color: white;
+                        }
+                    }
+
+
+                }
+            }
+
+            &__profile {
+                height: 50px;
+                @include flex(row, flex-start, center);
+            }
+
+            &__reduced {
+                width: 55px;
+
+                .AppLayout__nav {
+                    &__main__content {
+                        display: none;
+                    }
+
+                    &__profile {
+                        >* {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
 
         &__main {
+            flex: 1 1 auto;
             width: 100%;
-            @include flex(row, space-between, center);
-            line-height: 1.2;
-            color: $color-font-secondary;
-            font-weight: bold;
+            overflow-y: auto;
 
-            a {
-                color: $color-font-secondary;
+            .header {
+                height: 50px;
+                background-color: $color-bg;
+                width: 100%;
+                @include flex(row, center, center, 50px);
+                line-height: 1;
 
-                &:hover {
-                    color: $color-font-secondary-hover;
+                &__title {
+                    line-height: 1;
+                    width: fit-content;
+                    display: block;
+                    white-space: pre;
+                }
+
+                &__main {
+                    width: 100%;
+                    @include flex(row, flex-end, center);
+                    line-height: 1.2;
+                    color: $color-font-secondary;
+                    font-weight: bold;
+
+                    &__logout {
+                        color: $color-font-secondary;
+
+                        &:hover {
+                            color: $color-danger !important;
+                        }
+                    }
+
                 }
             }
 
-            .nav {
-                @include flex(row, center, center, 30px);
-
-                &__selected {
-                    color: $color-font-secondary-hover;
-                }
+            main {
+                padding: 0 20px;
+                height: 100%;
+                padding-top: 30px;
+                @include flex(column, flex-start, flex-start, 30px);
             }
-
-            &__logout {
-                &:hover {
-                    color: $color-danger !important;
-                }
-            }
-
         }
     }
 
@@ -76,6 +144,7 @@
         border: $size-input-border-width solid $color-input-border;
         padding: 20px;
         @include flex(column, flex-start, flex-start, 10px);
+
         div {
             white-space: pre;
             width: 100%;
@@ -83,10 +152,17 @@
         }
     }
 
-    main {
-        height: 100%;
-        padding-top: 30px;
-        @include flex(column, flex-start, flex-start, 30px);
-    }
+    &__main__toggleNavBar {
+        cursor: pointer;
+        width: fit-content;
+        height: fit-content;
+        @include flex(column, center, center);
+        border: none;
+        background-color: transparent;
 
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }

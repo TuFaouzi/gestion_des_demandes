@@ -8,6 +8,7 @@ class EmployeeController extends BaseController
     protected $requestStatusController;
     protected $requestController;
     protected $typeController;
+    protected $userController;
 
     public function __construct()
     {
@@ -15,19 +16,20 @@ class EmployeeController extends BaseController
         $this->requestStatusController = new RequestStatusController();
         $this->requestController = new RequestController();
         $this->typeController = new TypeController();
+        $this->userController = new UsersController();
     }
 
     public function requests()
     {
         $user_id = session()->get('user_id');
         $requests = $this->requestController->getUserRequests($user_id);
-        return view('employee/requests', ['requests' => $requests]);
+        return view('employee/requests', ['requests' => $requests, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
     public function index($perPage, $page) {
         $pp = $perPage ?? 10;
         $p = $page ?? 1;
-        return view('employee/index', ['perPage' => $pp, 'page' => $p]);
+        return view('employee/index', ['perPage' => $pp, 'page' => $p, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
     public function getUserConnectedRequestsPagination($perPage = 10, $page = 1) {
@@ -77,10 +79,10 @@ class EmployeeController extends BaseController
 
         $types = $this->typeController->getAllTypes();
 
-        return view('employee/add-request', ['types' => $types]);
+        return view('employee/add-request', ['types' => $types, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
     public function showRequest(int $id) {
-        return view('employee/showRequest', ['id' => $id]);
+        return view('employee/showRequest', ['id' => $id, 'user' => $this->userController->findUserById(session()->get('user_id'))]);
     }
 
 }
